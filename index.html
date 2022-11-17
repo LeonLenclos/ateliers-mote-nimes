@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliers mote</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><em>{{getCurrent().title}}</em> par {{getCurrent().author}} ({{index[i].name}})</li>
+                    <li><a @click="indexOpen=!indexOpen" href="#">{{indexOpen?'Fermer':'Déployer'}} l'index</a></li>
+                    <li><a @click="infoOpen=!infoOpen" href="#">{{infoOpen?'Fermer':'Déployer'}} l'à-propos</a></li>
+                    <li><a :href="getCurrent().href">Lien permanant</a></li>
+                    <li><a @click="navigate(-1)" href="#"><strong>Précédent</strong></a></li>
+                    <li><a @click="navigate(+1)" href="#"><strong>Suivant</strong></a></li>
+                </ul>
+            </nav>
+            <div id="info" v-if="infoOpen">
+                <h2>à propos</h2>
+                <div class="cols">
+                    <div>
+                        <h3>Utilisation</h3>
+                        <p>Les jeux se jouent avec les touches fléchées du clavier.</p>
+                        <p>Utilisez les commandes <em>Suivant</em> et <em>Précédent</em> pour naviguer parmis les jeux. L'<em>index</em> offre une vue d'ensemble de tous les jeux.</p>
+                        <p><em>Lien permanant</em> mène vers une page contenant uniquement le jeu en cours, sans cette interface.</p>
+                    </div> 
+                    <div>
+                        <h3>Contexte</h3>
+                        <p>Ces jeux ont été réalisés en une journée lors d'une Game Jam dans le cadre d'ateliers donnés à nimes en Novembre 2023 par <a href="https://leonlenclos.net">Léon Lenclos</a> organisé par le Carré d'art, Labo² et Mas Boulbon à l'occasion du NOGA</p>
+                        <p>Ils ont été développés par des élèves de CM1 et CM2 à l'aide du moteur de jeu <a href="https://leonlenclos.github.io/mote/">mote</a>.</p>
+                    </div> 
+                </div>
+                
+            </div>
+            
+            <div id="index" v-if="indexOpen">
+                <h2>index</h2>
+                <div class="cols">
+                    <div v-for="(group, ii) in index">
+                        <h3>{{group.name}}</h3>
+                        <ul>
+                            <li v-for="(game, jj) in group.games">
+                                <span v-if="i==ii&&j==jj"><em>{{game.title}}</em> par {{game.author}}</span>
+                                <a v-else href="#" @click="select(ii, jj)"><em>{{game.title}}</em> par {{game.author}}</a>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+            
+        </header>
+        <iframe ref="iframe" :src="getCurrent().href" frameborder="0"></iframe>
+    </div>
+    <script src="js/vue.global.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
