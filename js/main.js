@@ -16,17 +16,18 @@ data() {
 },
 methods:{
     select(i, j){
-        this.indexOpen = false;
-        this.$refs.iframe.focus();
-        this.$refs.iframe.contentDocument.body.focus();
-
+        this.closeAll();
         this.i=i;
         this.j=j;
     },
-    navigate(incr){
+    closeAll(){
         this.indexOpen = false;
+        this.infoOpen = false;
         this.$refs.iframe.focus();
         this.$refs.iframe.contentDocument.body.focus();
+    },
+    navigate(incr){
+        this.closeAll();
         this.j += incr;
         if(this.j >= this.index[this.i].games.length){
             this.j = 0;

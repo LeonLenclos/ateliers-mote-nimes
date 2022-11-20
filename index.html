@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliers mote</title>
+    <title>Ateliers TU ES UN POINT</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><em>{{getCurrent().title}}</em> par {{getCurrent().author}} ({{index[i].name}})</li>
+                    <li><h1>NOGA 2022 – Ateliers <strong>TU ES UN POINT</strong> avec Léon Lenclos</h1><em>{{getCurrent().title}}</em> par {{getCurrent().author}} ({{index[i].name}})</li>
                     <li><a @click="indexOpen=!indexOpen" href="#">{{indexOpen?'Fermer':'Déployer'}} l'index</a></li>
                     <li><a @click="infoOpen=!infoOpen" href="#">{{infoOpen?'Fermer':'Déployer'}} l'à-propos</a></li>
                     <li><a :href="getCurrent().href">Lien permanant</a></li>
@@ -32,6 +32,7 @@
                         <h3>Contexte</h3>
                         <p>Ces jeux ont été réalisés en une journée lors d'une Game Jam dans le cadre d'ateliers donnés à nimes en Novembre 2023 par <a href="https://leonlenclos.net">Léon Lenclos</a> organisé par le Carré d'art, Labo² et Mas Boulbon à l'occasion du NOGA</p>
                         <p>Ils ont été développés par des élèves de CM1 et CM2 à l'aide du moteur de jeu <a href="https://leonlenclos.github.io/mote/">mote</a>.</p>
+                        <img src="logo-noga.png" id="logo-noga" alt="NOGA 2022">
                         <p>Les ateliers ont étés encadrés par Coline Auvray, Virginie Farre, Kiara Jouhanneau, Léo Mpala, Christophe Sansorgne, Alexandre Simonet, Caroline Very-Mathieu. Et les professeurs des écoles, Mme Castanier, Mr Culioli, Mme Hardouin, Mme Ourmet.</p>
                     </div> 
                 </div>
