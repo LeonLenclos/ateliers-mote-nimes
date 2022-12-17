@@ -209,4 +209,79 @@ const index = [
             },
         ]
     },
+    {
+        name:"École Castanet",
+        games:[
+            {
+                title:"l'ile des boss",
+                author:"Alix et Louise",
+                href:"ateliers4/Alix et Louise.html"
+            },
+            {
+                title:"spider jeu",
+                author:"Célia et Elise",
+                href:"ateliers4/Célia et Elise.html"
+            },
+            {
+                title:"les aventurières",
+                author:"Ellora et Selma",
+                href:"ateliers4/Ellora et Selma.html"
+            },
+            {
+                title:"coucou",
+                author:"Hédy et Sania",
+                href:"ateliers4/Hédy et Sania.html"
+            },
+            {
+                title:"sur la LUNE",
+                author:"Imran et Candide",
+                href:"ateliers4/Imran et Candide.html"
+            },
+            {
+                title:"niveau 1",
+                author:"Léa",
+                href:"ateliers4/Léa.html"
+            },
+            {
+                title:"poulette",
+                author:"Lorenzo et Angelo",
+                href:"ateliers4/Lorenzo et Angelo.html"
+            },
+            {
+                title:"Le pigeon voyageur avec son ami la lettre",
+                author:"Lou et Nina",
+                href:"ateliers4/Lou et Nina.html"
+            },
+            {
+                title:"or",
+                author:"Lucas et Valentin",
+                href:"ateliers4/Lucas et Valentin.html"
+            },
+            {
+                title:"Le super jeu des ML",
+                author:"Mathilde et Louise",
+                href:"ateliers4/Mathilde et Louise.html"
+            },
+            {
+                title:"le meilleur jeu",
+                author:"Nadir",
+                href:"ateliers4/Nadir 2.html"
+            },
+            {
+                title:"zarbi",
+                author:"Sabri",
+                href:"ateliers4/Sabri.html"
+            },
+            {
+                title:"?",
+                author:"Sacha A et Rémi",
+                href:"ateliers4/Sacha A et Rémi.html"
+            },
+            {
+                title:"Freddy",
+                author:"Sacha et Noé",
+                href:"ateliers4/Sacha et Noé.html"
+            },
+        ]
+    }
 ];
